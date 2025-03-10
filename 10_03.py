@@ -71,22 +71,41 @@
 # temperaturasFah = list(map(celToFah, temperaturas))
 # print(temperaturasFah)
 
-numLista = [1,2,3,4,5,6,7,8,9,10]
-listaPares = list(filter(lambda x: x % 2 == 0, numLista))
-print(listaPares)
+# numLista = [1,2,3,4,5,6,7,8,9,10]
+# listaPares = list(filter(lambda x: x % 2 == 0, numLista))
+# listaPares = list(filter(lambda x: not x % 2 , numLista))
+# print(listaPares)
 
-from functools import reduce
+# from functools import reduce
 
-produto = reduce(lambda x,y: x * y, numLista)
-print(produto)
+# produto = reduce(lambda x,y: x * y, numLista)
+# print(produto)
 
-listaPalavras = ['Feijão', 'Tomate', 'Arroz', 'Pão']
-lenPalavras = list(sorted(listaPalavras, key=len))
-print(lenPalavras)
+# listaPalavras = ['Feijão', 'Tomate', 'Arroz', 'Pão']
+# lenPalavras = list(sorted(listaPalavras, key=len))
+# print(lenPalavras)
 
-print('Todos são pares' if all(map(lambda x: x > 0, numLista)) else 'Pelo menos um é negativo')
+# print('Todos são pares' if all(map(lambda x: x > 0, numLista)) else 'Pelo menos um é negativo')
 
-print(any(map(lambda x: x % 2 == 0, numLista)))
+# print(any(map(lambda x: x % 2 == 0, numLista)))
 
-combinado = list(zip(numLista, listaPalavras))
-print(combinado)
+# combinado = list(zip(numLista, listaPalavras))
+# print(combinado)
+
+# lista = [2,22,14,89,65,21,3,4,5]
+# quadrados = list(map(lambda x: x**2, lista))
+# print(quadrados)
+
+# listaPalavras = ['Banana', 'Maça', 'Laranja', 'Ananas', 'Uva']
+# palavras5 = list(filter(lambda x : len(x) > 5, listaPalavras))
+# print(palavras5)
+
+# quadradosPares = list(map(lambda x: x**2, filter(lambda x: x % 2 == 0, lista)))
+
+# print(quadradosPares)
+
+dicionario = {'gato': 'cat', 'cão': 'dog', 'peixe': 'fish'}
+
+ordenado = list(map(lambda x: x, dicionario))
+
+print(sorted(ordenado))
