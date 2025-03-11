@@ -106,6 +106,43 @@
 
 dicionario = {'gato': 'cat', 'cão': 'dog', 'peixe': 'fish'}
 
-ordenado = list(map(lambda x: x, dicionario))
+diciOrdenado = sorted(list(map(lambda x: x, dicionario)))
 
-print(sorted(ordenado))
+print(diciOrdenado)
+
+class Rectangulo:
+  def __init__(self, largura, altura):
+    self.largura = largura
+    self.altura = altura
+
+  def calcArea(self):
+    return self.largura * self.altura
+  
+  def calcPermitro(self):
+    return 2 * (self.largura + self.altura)
+  
+
+rect = Rectangulo(5,12)
+
+print(f'Área: {rect.calcArea()}')
+print(f'Perímetro: {rect.calcPermitro()}')
+
+class ContaBancaria:
+  def __init__(self, saldo):
+    self.saldo = saldo
+
+  def deposito(self, deposito):
+    self.saldo += deposito
+
+  def levantamento(self, levantamento):
+    self.saldo -= levantamento
+  
+  def consultarSaldo(self):
+    return self.saldo
+
+conta = ContaBancaria(0)
+
+conta.deposito(100)
+conta.levantamento(60)
+
+print(conta.consultarSaldo())
