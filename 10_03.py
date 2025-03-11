@@ -104,45 +104,66 @@
 
 # print(quadradosPares)
 
-dicionario = {'gato': 'cat', 'cão': 'dog', 'peixe': 'fish'}
+# dicionario = {'gato': 'cat', 'cão': 'dog', 'peixe': 'fish'}
 
-diciOrdenado = sorted(list(map(lambda x: x, dicionario)))
+# diciOrdenado = sorted(list(map(lambda x: x, dicionario)))
 
-print(diciOrdenado)
+# print(diciOrdenado)
 
-class Rectangulo:
-  def __init__(self, largura, altura):
-    self.largura = largura
-    self.altura = altura
+# class Rectangulo:
+#   def __init__(self, largura, altura):
+#     self.largura = largura
+#     self.altura = altura
 
-  def calcArea(self):
-    return self.largura * self.altura
+#   def calcArea(self):
+#     return self.largura * self.altura
   
-  def calcPermitro(self):
-    return 2 * (self.largura + self.altura)
+#   def calcPermitro(self):
+#     return 2 * (self.largura + self.altura)
   
 
-rect = Rectangulo(5,12)
+# rect = Rectangulo(5,12)
 
-print(f'Área: {rect.calcArea()}')
-print(f'Perímetro: {rect.calcPermitro()}')
+# print(f'Área: {rect.calcArea()}')
+# print(f'Perímetro: {rect.calcPermitro()}')
 
-class ContaBancaria:
-  def __init__(self, saldo):
-    self.saldo = saldo
+# class ContaBancaria:
+#   def __init__(self, saldo):
+#     self.saldo = saldo
 
-  def deposito(self, deposito):
-    self.saldo += deposito
+#   def deposito(self, deposito):
+#     self.saldo += deposito
 
-  def levantamento(self, levantamento):
-    self.saldo -= levantamento
+#   def levantamento(self, levantamento):
+#     self.saldo -= levantamento
   
-  def consultarSaldo(self):
-    return self.saldo
+#   def consultarSaldo(self):
+#     return self.saldo
 
-conta = ContaBancaria(0)
+# conta = ContaBancaria(0)
 
-conta.deposito(100)
-conta.levantamento(60)
+# conta.deposito(100)
+# conta.levantamento(60)
 
-print(conta.consultarSaldo())
+# print(conta.consultarSaldo())
+
+from functools import reduce
+
+class Aluno:
+  def __init__(self, nome, numero, notas):
+    self.nome = nome
+    self.numero = numero
+    self.notas = notas
+  
+  def calcMedia(self):
+    return reduce(lambda x, y: x + y, self.notas) / len(self.notas)
+  
+  def aprovado(self):
+    return f'{self.calcMedia():.1f} Aprovado' if self.calcMedia() >= 10 else f'{self.calcMedia():.1f} Reprovado'
+
+
+aluno = Aluno('Bruno', 89, [10, 11, 12, 13, 9, 8])
+aluno2 = Aluno('Aline', 35, [0, 1, 2, 3, 9, 8])
+
+print(aluno.aprovado())
+print(aluno2.aprovado())
