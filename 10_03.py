@@ -104,11 +104,20 @@
 
 # print(quadradosPares)
 
-# dicionario = {'gato': 'cat', 'cão': 'dog', 'peixe': 'fish'}
-
-# diciOrdenado = sorted(list(map(lambda x: x, dicionario)))
-
+# dicionario = [{'cão': 'dog'}, {'gato': 'cat'}, {'peixe': 'fish'}]
+# diciOrdenado = sorted(list(map(lambda x: x.keys(), dicionario)))
 # print(diciOrdenado)
+
+# alunos=[
+#   {'nome':'Bruno', 'nota': 15},
+#   {'nome':'João', 'nota': 1},
+#   {'nome':'Nuno', 'nota': 20}
+#   ]
+
+# alunos_ordenado = sorted(alunos, key=lambda aluno: aluno['nota'], reverse=True)
+
+# for aluno in alunos_ordenado:
+#   print(f'{aluno['nome']}: {aluno['nota']}')
 
 # class Rectangulo:
 #   def __init__(self, largura, altura):
@@ -147,23 +156,23 @@
 
 # print(conta.consultarSaldo())
 
-from functools import reduce
+# from functools import reduce
 
-class Aluno:
-  def __init__(self, nome, numero, notas):
-    self.nome = nome
-    self.numero = numero
-    self.notas = notas
+# class Aluno:
+#   def __init__(self, nome, numero, notas):
+#     self.nome = nome
+#     self.numero = numero
+#     self.notas = notas
   
-  def calcMedia(self):
-    return reduce(lambda x, y: x + y, self.notas) / len(self.notas)
+#   def calcMedia(self):
+#     return reduce(lambda x, y: x + y, self.notas) / len(self.notas)
+#     # return sum(self.notas) / len(self.notas)
   
-  def aprovado(self):
-    return f'{self.calcMedia():.1f} Aprovado' if self.calcMedia() >= 10 else f'{self.calcMedia():.1f} Reprovado'
+#   def aprovado(self):
+#     return f'{self.calcMedia():.1f} Aprovado' if self.calcMedia() >= 10 else f'{self.calcMedia():.1f} Reprovado'
 
+# aluno = Aluno('Bruno', 89, [10, 11, 12, 13, 9, 8])
+# aluno2 = Aluno('Aline', 35, [0, 1, 2, 3, 9, 8])
 
-aluno = Aluno('Bruno', 89, [10, 11, 12, 13, 9, 8])
-aluno2 = Aluno('Aline', 35, [0, 1, 2, 3, 9, 8])
-
-print(aluno.aprovado())
-print(aluno2.aprovado())
+# print(aluno.aprovado())
+# print(aluno2.aprovado())
